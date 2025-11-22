@@ -1,3 +1,4 @@
+console.log(`🍺🍺🍺当前版本：v0.0.5`)
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [4],
   {

@@ -495,6 +495,7 @@
                                   id: "upFiles",
                                   name: "Files",
                                   type: "file",
+                                  multiple: true,
                                 },
                                 on: { change: t.uploadInputchange },
                               }),

@@ -1,4 +1,3 @@
-console.log(`🍺🍺🍺当前版本：v0.0.5`)
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [4],
   {
@@ -778,6 +777,7 @@ console.log(`🍺🍺🍺当前版本：v0.0.5`)
             "5e6831cc",
             null
           ));
+      console.log(`🍺🍺🍺当前版本：v0.0.5`);
       e.default = x.exports;
     },
   },

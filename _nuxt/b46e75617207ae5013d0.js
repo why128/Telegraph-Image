@@ -406,7 +406,7 @@
               for (var c = 0; c < n; c++) o.push(this.doUpload(t[c]));
               Promise.all(o)
                 .then(function (t) {
-                  (e.status = "done"), (e.imgUrl = t.join("\n"));
+                  (e.status = "done"), (e.imgUrl = t.join(","));
                 })
                 .catch(function () {
                   e.showError();

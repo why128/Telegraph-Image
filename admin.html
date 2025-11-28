@@ -342,6 +342,12 @@
         .then(response => response.json())
         .then(result => {
           this.tableData = result.keys || [];
+          this.tableData = this.tableData.map(v => {
+            if(v.metadata && v.metadata.TimeStamp){
+              v.metadata.TimeStamp = this.formatDate(new Date(v.metadata.TimeStamp));
+            }
+            return v;
+          });
           this.nextCursor = result.list_complete ? null : result.cursor;
           console.log(result);
           this.Number = this.tableData.length;

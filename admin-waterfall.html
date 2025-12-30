@@ -69,7 +69,7 @@
     $.ajax({
       url: cursor
         ? "./api/manage/list?cursor=" + encodeURIComponent(cursor)
-        : "./api/manage/list?limit=100",
+        : "./api/manage/list?limit=1000",
       dataType: "json",
       success: function(data){
         cursor = data.list_complete ? null : data.cursor;

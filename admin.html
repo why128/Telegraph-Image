@@ -250,8 +250,8 @@
           this.nextCursor = null;
           const opts = { method: 'GET', redirect: 'follow', credentials: 'include' };
           const base = this.search
-            ? `./api/manage/list?limit=100&prefix=${encodeURIComponent(this.search)}`
-            : `./api/manage/list?limit=100`;
+            ? `./api/manage/list?limit=1000&prefix=${encodeURIComponent(this.search)}`
+            : `./api/manage/list?limit=1000`;
           fetch(base, opts)
             .then(r => r.json())
             .then(result => {
@@ -273,8 +273,8 @@
       loadMore() {
         const opts = { method: 'GET', redirect: 'follow', credentials: 'include' };
         const base = this.search
-          ? `./api/manage/list?limit=100&prefix=${encodeURIComponent(this.search)}`
-          : `./api/manage/list?limit=100`;
+          ? `./api/manage/list?limit=1000&prefix=${encodeURIComponent(this.search)}`
+          : `./api/manage/list?limit=1000`;
         const url = this.nextCursor
           ? `${base}&cursor=${encodeURIComponent(this.nextCursor)}`
           : base;
@@ -338,7 +338,7 @@
       };
 
 
-        fetch("./api/manage/list?limit=100", requestOptions)
+        fetch("./api/manage/list?limit=1000", requestOptions)
         //判断是否需要登录
         .then(response => {
           if (response.status == 401) {

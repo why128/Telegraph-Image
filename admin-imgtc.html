@@ -384,7 +384,7 @@
           const opts = { method: 'GET', credentials: 'include' };
           const url = this.nextCursor
             ? `./api/manage/list?cursor=${encodeURIComponent(this.nextCursor)}`
-            : `./api/manage/list?limit=100`;
+            : `./api/manage/list?limit=1000`;
 
           fetch(url, opts)
             .then(r => r.json())
@@ -535,7 +535,7 @@
         event.target.value = '';
       },
         refreshFileList() {  // 不刷新页面,仅更新数据
-          fetch("./api/manage/list?limit=100", { method: 'GET', credentials: 'include' })
+          fetch("./api/manage/list?limit=1000", { method: 'GET', credentials: 'include' })
             .then(response => response.json())
             .then(result => {
               const files = result.keys || [];
@@ -871,7 +871,7 @@
         .catch(() => this.$message.error('同步数据时出错，请检查网络连接'));
 
       // 获取文件列表数据
-        fetch("./api/manage/list?limit=100", { method: 'GET', credentials: 'include' })
+        fetch("./api/manage/list?limit=1000", { method: 'GET', credentials: 'include' })
           .then(response => response.json())
           .then(result => {
             console.log("result: ", result);
